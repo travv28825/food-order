@@ -1,14 +1,10 @@
 import type { NextPage } from 'next';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
 
 const Home: NextPage = () => {
   return (
-    <>
-      <Navbar />
-      <main></main>
-      <Footer />
-    </>
+    <div className="text-center text-blue-700 font-bold">
+      <p>Home</p>
+    </div>
   );
 };
 
