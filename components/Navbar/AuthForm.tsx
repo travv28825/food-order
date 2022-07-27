@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import { useAuth } from '../../context/Auth';
 import { useUser } from '../../context/User';
 
