@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import { useAuth } from '../context/Auth';
 import Link from 'next/link';
 
-const login: NextPage = () => {
+const login: React.FC = () => {
   const [email, setEmail] = useState('');
   const { login, loginState } = useAuth();
 

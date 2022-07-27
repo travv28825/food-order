@@ -5,11 +5,11 @@ export interface AuthState {
 }
 
 export interface AuthContextProps {
-  loginState: AuthState
+  loginState: AuthState;
   login: any;
   logout: any;
 }
 
 export interface authCredentials {
   email: string;
-};
+}

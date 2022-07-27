@@ -1,4 +1,4 @@
-import { AuthState } from "./type";
+import { AuthState } from './type';
 
 type ActionAuthReducer =
   | { type: 'LOGIN_REQUEST' }
@@ -12,10 +12,7 @@ const INITIAL_STATE: AuthState = {
   errorMessage: '',
 };
 
-const AuthReducer = (
-  state: AuthState = INITIAL_STATE,
-  action: ActionAuthReducer,
-): AuthState => {
+const AuthReducer = (state: AuthState = INITIAL_STATE, action: ActionAuthReducer): AuthState => {
   switch (action.type) {
     case 'LOGIN_REQUEST':
       return {

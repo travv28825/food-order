@@ -68,7 +68,10 @@ function LinkSocial({ social }: Social) {
 
   return (
     <Link href={data.profile}>
-      <a target="_blank" className="flex justify-between text-gray-600  hover:text-gray-900 dark:hover:text-gray-600">
+      <a
+        target="_blank"
+        className="flex justify-between text-gray-600  hover:text-gray-900 dark:hover:text-gray-600"
+      >
         {data.icon}
       </a>
     </Link>

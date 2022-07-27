@@ -1,4 +1,4 @@
-import { User } from "./type";
+import { User } from './type';
 
 type ActionAuthReducer =
   | { type: 'SET_USER'; payload: User }
@@ -6,16 +6,12 @@ type ActionAuthReducer =
   | { type: 'LOGIN_ERROR'; payload: string }
   | { type: 'LOGOUT' };
 
-
-
-const UserReducer = (
-  state: User,
-  action: ActionAuthReducer,
-): User => {
+const UserReducer = (state: User, action: ActionAuthReducer): User => {
   switch (action.type) {
     case 'SET_USER':
       return {
-        ...state, ...action.payload
+        ...state,
+        ...action.payload,
       };
     case 'LOGIN_SUCCESS':
       return {

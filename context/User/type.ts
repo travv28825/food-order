@@ -2,7 +2,7 @@ export interface UserIdentity {
   id: string;
   user_id: string;
   identity_data: {
-      [key: string]: any;
+    [key: string]: any;
   };
   provider: string;
   created_at: string;
@@ -39,5 +39,5 @@ export interface User {
 }
 
 export interface UserContextProps {
-  userState: User
+  userState: User;
 }
