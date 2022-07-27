@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 import LinkSocial from '../LinkSocial';
 
 function Footer() {
