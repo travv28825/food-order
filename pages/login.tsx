@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import type { NextPage } from 'next';
-import { useAuth } from '../context/Auth';
 import Link from 'next/link';
 
-const login: React.FC = () => {
+import { useAuth } from '../context/Auth';
+
+const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const { login, loginState } = useAuth();
 
@@ -14,8 +14,8 @@ const login: React.FC = () => {
   return (
     <div className="md:w-[50%] md:mx-auto py-4 px-4">
       <label
-        htmlFor="email-address-icon"
         className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+        htmlFor="email-address-icon"
       >
         Your Email
       </label>
@@ -28,18 +28,18 @@ const login: React.FC = () => {
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
           </svg>
         </div>
         <input
-          type="text"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          disabled={loginState.loading}
           id="email-address-icon"
+          placeholder="name@dom.com"
+          type="text"
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="name@dom.com"
-          disabled={loginState.loading}
         />
       </div>
       <Link href="/login">
@@ -51,8 +51,8 @@ const login: React.FC = () => {
               hover:bg-blue-700
               hover:border-slate-700
               "
-          onClick={handleLogin}
           disabled={loginState.loading}
+          onClick={handleLogin}
         >
           <span>Send</span>
         </button>
@@ -79,4 +79,4 @@ const login: React.FC = () => {
   );
 };
 
-export default login;
+export default Login;

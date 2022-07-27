@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useReducer } from 'react';
 import { useRouter } from 'next/router';
 
-import { AuthContextProps, authCredentials } from './type';
 import { supabase } from '../../service/supabase';
+
+import { AuthContextProps, authCredentials } from './type';
 import { AuthReducer, INITIAL_STATE } from './AuthReducer';
 
 interface Children {
